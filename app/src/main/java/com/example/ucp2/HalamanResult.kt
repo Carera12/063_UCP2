@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.Divider
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -45,6 +47,7 @@ fun HalamanResult(
                     Text(text = item.second.toString(), fontWeight = FontWeight.Bold)
                 }
                 Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_small)))
+                Divider()
 
             }
 
@@ -53,7 +56,7 @@ fun HalamanResult(
                     .weight(1f, false)
                     .padding(dimensionResource(R.dimen.padding_medium))
             ) {
-                OutlinedButton(
+                Button(
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onCancelButtonClicked
                 ) {

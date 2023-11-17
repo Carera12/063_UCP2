@@ -44,15 +44,14 @@ fun HalamanForm(
     onSubmitBUttonClicked: (MutableList<String>) -> Unit,
     modifier: Modifier = Modifier
 ) {
+
     var nama by rememberSaveable { mutableStateOf("") }
     var nim by rememberSaveable { mutableStateOf("") }
     var konsentrasi by rememberSaveable { mutableStateOf("") }
     var judul by remember { mutableStateOf("") }
     var dosenYgDipilih by remember { mutableStateOf("") }
     var dosenDipilih by remember { mutableStateOf("") }
-
-
-    var listData: MutableList<String> = mutableListOf(nama, nim, konsentrasi, judul)
+    var listData: MutableList<String> = mutableListOf(nama, nim, konsentrasi, judul, dosenYgDipilih, dosenDipilih)
 
         Column(
             verticalArrangement = Arrangement.Center,
